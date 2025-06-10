@@ -1,0 +1,12 @@
+<figure [class.right]="aligne === 'right'">
+  <img [src]="imageUrl" [alt]="legend" (click)="openModal()" />
+  <figcaption>{{ legend }}</figcaption>
+</figure>
+
+<app-image-modal
+  *ngIf="showModal"
+  [imageUrl]="imageUrl"
+  [alt]="legend"
+  [caption]="legend"
+  (closeModal)="closeModal()"
+></app-image-modal>
